@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Trang web giới thiệu Chiến dịch Điện Biên Phủ năm 1954: bối cảnh, diễn biến, nhân vật, kết quả và di sản lịch sử." />
+  <title>CHIẾN DỊCH ĐIỆN BIÊN PHỦ NĂM 1954</title>
+  <style>
+    :root{
+      --bg:#f5f1e8;
+      --paper:#fffdf8;
+      --ink:#28231e;
+      --muted:#6e655b;
+      --red:#8e2424;
+      --red2:#b94432;
+      --gold:#b58a3c;
+      --line:rgba(40,35,30,.12);
+      --shadow:0 18px 60px rgba(49,37,25,.12);
+      --radius:22px;
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;word-break:normal;overflow-wrap:normal;hyphens:none;word-spacing:normal}
+    a{color:inherit}
+    .topbar{position:sticky;top:0;z-index:30;background:rgba(255,253,248,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1180px;margin:auto;padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:800;letter-spacing:.02em;color:var(--red);text-decoration:none}
+    .navlinks{display:flex;gap:20px;flex-wrap:wrap;font-size:.92rem;color:var(--muted)}
+    .navlinks a{text-decoration:none}
+    .navlinks a:hover{color:var(--red)}
+    .hero{min-height:84vh;display:grid;place-items:center;position:relative;overflow:hidden;background:
+      linear-gradient(90deg,rgba(25,18,13,.78),rgba(25,18,13,.46),rgba(25,18,13,.20)),
+      url('https://special.nhandan.vn/chienthang_vangvong_tren_thegioi/assets/d7UXgs6HHa/bk.1581_resize-1449x944.jpg') center/cover;
+      color:#fff}
+    .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 25%,rgba(214,171,77,.24),transparent 27%),linear-gradient(180deg,transparent 60%,rgba(0,0,0,.28))}
+    .hero-inner{position:relative;z-index:1;max-width:1180px;width:100%;padding:92px 20px 70px;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.15em;color:#f6d98b}
+    .eyebrow::before{content:"";width:30px;height:2px;background:#f6d98b}
+    h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(3.4rem,8vw,7rem);line-height:.95;margin:18px 0 22px;letter-spacing:-.04em}
+    .hero p{max-width:680px;font-size:1.08rem;color:rgba(255,255,255,.88);margin:0}
+    .hero-card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.24);border-radius:var(--radius);padding:25px;backdrop-filter:blur(12px)}
+    .hero-card .big{font-size:3.25rem;line-height:1;font-weight:850;color:#f7df9c}
+    .hero-card small{color:rgba(255,255,255,.72)}
+    .hero-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+    .hero-meta div{padding-top:13px;border-top:1px solid rgba(255,255,255,.25)}
+    .hero-meta strong{display:block;color:#fff;font-size:1rem}
+    .hero-meta span{font-size:.86rem;color:rgba(255,255,255,.68)}
+    .container{max-width:1180px;margin:auto;padding:78px 20px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}
+    .section-head h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4vw,3.25rem);line-height:1.06;margin:0}
+    .section-head p{max-width:560px;color:var(--muted);margin:0}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .card-pad{padding:28px}
+    .accent{position:relative;overflow:hidden}
+    .accent::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--red)}
+    .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .stat{padding:22px;background:var(--paper);border:1px solid var(--line);border-radius:18px}
+    .stat b{display:block;font-size:1.9rem;line-height:1.1;color:var(--red)}
+    .stat span{font-size:.88rem;color:var(--muted)}
+    .video-wrap{position:relative;padding-top:56.25%;overflow:hidden;border-radius:20px;background:#191612;box-shadow:var(--shadow)}
+    .video-wrap iframe,.video-wrap video{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:contain;background:#191612}
+    .video-caption{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-top:14px;color:var(--muted);font-size:.88rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;border-radius:999px;text-decoration:none;border:1px solid var(--line);font-weight:750;background:var(--paper)}
+    .btn:hover{border-color:var(--red);color:var(--red)}
+    .timeline{position:relative;margin:12px 0 0 7px;padding-left:28px;border-left:2px dashed rgba(142,36,36,.30)}
+    .event{position:relative;padding:0 0 28px}
+    .event:last-child{padding-bottom:0}
+    .event::before{content:"";position:absolute;left:-35px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 6px var(--bg)}
+    .date{font-weight:850;color:var(--red);font-size:.91rem}
+    .event h3{margin:5px 0 6px;font-size:1.2rem}
+    .event p{margin:0;color:var(--muted)}
+    .split-banner{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;border-radius:var(--radius);overflow:hidden}
+    .split-banner > div{padding:26px;background:#30271f;color:#fff}
+    .split-banner > div:nth-child(2){background:#f0e7d7;color:var(--ink)}
+    .split-banner h3{margin-top:0}
+    .split-banner p{margin-bottom:0;opacity:.86}
+    .figures{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .figure{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;padding:18px;border:1px solid var(--line);border-radius:18px;background:var(--paper)}
+    .avatar{width:96px;height:96px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,#ded2ba,#a88b62);color:#fff;font-family:Georgia,serif;font-size:2rem;font-weight:800;overflow:hidden}
+    .figure h3{margin:0 0 2px;font-size:1.1rem}
+    .figure p{margin:0;color:var(--muted);font-size:.9rem}
+    .gallery{display:grid;grid-template-columns:1.3fr .85fr .85fr;gap:16px}
+    .gallery figure{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+    .gallery img{width:100%;height:270px;display:block;object-fit:cover;background:#ded6c8}
+    .gallery figcaption{padding:14px 16px;font-size:.84rem;color:var(--muted)}
+    .quote{font-family:Georgia,serif;font-size:1.7rem;line-height:1.35;margin:0}
+    .quote small{display:block;margin-top:14px;font-family:inherit;font-size:.8rem;color:var(--muted)}
+    .quiz{display:grid;grid-template-columns:1fr .9fr;gap:25px;align-items:center}
+    .quiz-options{display:grid;gap:10px;margin-top:18px}
+    .option{border:1px solid var(--line);padding:14px 16px;border-radius:14px;background:var(--paper);text-align:left;cursor:pointer;font:inherit}
+    .option:hover{border-color:var(--red)}
+    .option.correct{border-color:#67854d;background:#eef4e8}
+    .option.wrong{border-color:#a94442;background:#f8eceb}
+    .quiz-result{min-height:26px;margin-top:12px;font-weight:750}
+    footer{background:#241d17;color:rgba(255,255,255,.75)}
+    footer .container{padding-top:36px;padding-bottom:36px}
+    .sources{font-size:.86rem;line-height:1.75}
+    .sources a{color:#f3d796}
+    .mini{font-size:.78rem;color:var(--muted)}
+    .to-top{position:fixed;right:18px;bottom:18px;z-index:20;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(255,253,248,.92);box-shadow:var(--shadow);cursor:pointer;font-size:1.1rem}
+    @media (max-width: 900px){
+      .hero-inner,.grid-2,.quiz{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr}
+      .gallery figure:first-child{grid-column:1/-1}
+      .hero{min-height:auto}
+    }
+    @media (max-width: 640px){
+      .nav{align-items:flex-start}.navlinks{gap:10px;font-size:.82rem}
+      .hero-inner{padding-top:72px}
+      .hero-meta,.stat-grid,.figures,.gallery{grid-template-columns:1fr}
+      .gallery figure:first-child{grid-column:auto}
+      .split-banner{grid-template-columns:1fr}
+      .figure{grid-template-columns:72px 1fr}.avatar{width:72px;height:72px}
+      .container{padding-top:56px;padding-bottom:56px}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="#top">ĐIỆN BIÊN PHỦ · 1954</a>
+      <div class="navlinks">
+        <a href="#tong-quan">Tổng quan</a>
+        <a href="#video">Video</a>
+        <a href="#dien-bien">Diễn biến</a>
+        <a href="#dau-an">Dấu ấn</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">Trang tư liệu lịch sử</span>
+          <h1>CHIẾN DỊCH<br>ĐIỆN BIÊN PHỦ<br>NĂM 1954</h1>
+          <p>Khám phá bối cảnh, những mốc chính của 56 ngày đêm chiến đấu, các địa danh tiêu biểu và ý nghĩa lịch sử của chiến thắng Điện Biên Phủ.</p>
+        </div>
+        <div class="hero-card">
+          <div class="big">56 ngày đêm</div>
+          <small>13/03/1954 → 07/05/1954</small>
+          <div class="hero-meta">
+            <div><strong>Điện Biên Phủ</strong><span>Thung lũng Mường Thanh, Tây Bắc Việt Nam</span></div>
+            <div><strong>Quyết chiến chiến lược</strong><span>Đỉnh cao của cuộc kháng chiến chống Pháp</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tong-quan" class="container">
+      <div class="section-head">
+        <div><span class="eyebrow" style="color:var(--red)">01 · Tổng quan</span><h2>Một chiến dịch bước vào lịch sử thế kỷ XX</h2></div>
+        <p>Ngày 6/12/1953, Bộ Chính trị quyết định mở Chiến dịch Điện Biên Phủ. Ngày 13/3/1954, chiến dịch nổ súng; đến chiều 7/5/1954, tập đoàn cứ điểm Điện Biên Phủ bị đánh bại.</p>
+      </div>
+      <div class="stat-grid">
+        <div class="stat"><b>13/3</b><span>Chiến dịch mở màn năm 1954</span></div>
+        <div class="stat"><b>7/5</b><span>Ngày chiến dịch kết thúc thắng lợi</span></div>
+        <div class="stat"><b>56</b><span>Ngày đêm chiến đấu liên tục</span></div>
+        <div class="stat"><b>1954</b><span>Năm của bước ngoặt lịch sử</span></div>
+      </div>
+      <div class="grid-2" style="margin-top:24px">
+        <article class="card accent"><div class="card-pad">
+          <h3>Bối cảnh</h3>
+          <p>Trong chiến cuộc Đông Xuân 1953–1954, các cuộc tiến công chiến lược của Việt Nam Dân chủ Cộng hòa buộc lực lượng Pháp phải phân tán. Pháp xây dựng Điện Biên Phủ thành một tập đoàn cứ điểm lớn ở vùng Tây Bắc.</p>
+          <p class="mini">Nguồn: Bộ Tư lệnh Bảo vệ Lăng Chủ tịch Hồ Chí Minh; Bảo tàng Lịch sử Quân sự Việt Nam.</p>
+        </div></article>
+        <article class="card"><div class="card-pad">
+          <h3>Mục tiêu của chiến dịch</h3>
+          <p>Đánh vào tập đoàn cứ điểm Điện Biên Phủ, làm thay đổi cục diện trên chiến trường và tạo điều kiện cho đấu tranh ngoại giao tại Hội nghị Genevo.</p>
+          <p class="mini">Nội dung khái quát từ các tài liệu của Bộ Quốc phòng và Bảo tàng Lịch sử Quân sự Việt Nam.</p>
+        </div></article>
+      </div>
+    </section>
+
+    <section id="video" class="container" style="padding-top:20px">
+      <div class="section-head">
+        <div><span class="eyebrow" style="color:var(--red)">02 · Video</span><h2>Xem tư liệu về chiến dịch</h2></div>
+        <p>Video dưới đây là tệp MP4 bạn đã cung cấp và được phát trực tiếp ngay trên trang web.</p>
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/lp8vODuwq_k" title="Video về Chiến dịch Điện Biên Phủ năm 1954" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="video-caption">
+        <span>Video MP4 · Nguồn do người dùng cung cấp</span>
+        <a class="btn" href="https://www.youtube.com/watch?v=lp8vODuwq_k" target="_blank" rel="noopener">Mở video ↗</a>
+      </div>
+    </section>
+
+    <section id="dien-bien" class="container">
+      <div class="section-head">
+        <div><span class="eyebrow" style="color:var(--red)">03 · Diễn biến</span><h2>Ba đợt tiến công chính</h2></div>
+        <p>Các tài liệu quân sự Việt Nam thường khái quát chiến dịch thành ba đợt, từ tiến công các cứ điểm vòng ngoài đến tổng công kích vào trung tâm.</p>
+      </div>
+      <div class="card card-pad">
+        <div class="timeline">
+          <div class="event">
+            <div class="date">13 → 17/03/1954 · ĐỢT 1</div>
+            <h3>Phá vỡ cửa ngõ phía Bắc</h3>
+            <p>Quân ta tiến công Him Lam, Độc Lập và làm chủ Bản Kéo, từng bước uy hiếp sân bay Mường Thanh và khu trung tâm.</p>
+          </div>
+          <div class="event">
+            <div class="date">30/03 → 30/04/1954 · ĐỢT 2</div>
+            <h3>Khép chặt vòng vây</h3>
+            <p>Các cao điểm phía Đông phân khu trung tâm như C1, D1, E1 và A1 diễn ra giằng co quyết liệt; hệ thống giao thông hào được đẩy sâu, vòng vây ngày càng siết chặt.</p>
+          </div>
+          <div class="event">
+            <div class="date">01 → 07/05/1954 · ĐỢT 3</div>
+            <h3>Tổng công kích và kết thúc chiến dịch</h3>
+            <p>Ta mở đợt tiến công cuối cùng, làm chủ các vị trí then chốt. Chiều 7/5/1954, sở chỉ huy tập đoàn cứ điểm bị đánh chiếm, chiến dịch kết thúc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="split-banner">
+        <div><h3>Đồi A1</h3><p>Vị trí phòng ngự then chốt ở phía Đông. Cuộc chiến kéo dài nhiều tuần và trở thành một trong những điểm nóng nhất của chiến dịch.</p></div>
+        <div><h3>Hầm chỉ huy De Castries</h3><p>Sở chỉ huy của tập đoàn cứ điểm ở Mường Thanh. Chiều 7/5/1954, nơi đây bị đánh chiếm và tướng De Castries cùng bộ tham mưu bị bắt.</p></div>
+      </div>
+    </section>
+
+    <section class="container" style="padding-top:18px">
+      <div class="section-head">
+        <div><span class="eyebrow" style="color:var(--red)">04 · Con người & lực lượng</span><h2>Những nhân vật gắn với chiến dịch</h2></div>
+        <p>Phần này tập trung vào các vị trí chỉ huy và lực lượng có vai trò được ghi nhận trong các tài liệu lịch sử.</p>
+      </div>
+      <div class="figures">
+        <article class="figure"><div class="avatar">VG</div><div><h3>Võ Nguyên Giáp</h3><p>Tổng Tư lệnh Quân đội Nhân dân Việt Nam, Chỉ huy trưởng chiến dịch.</p></div></article>
+        <article class="figure"><div class="avatar">DC</div><div><h3>Henri de Castries</h3><p>Chỉ huy tập đoàn cứ điểm Điện Biên Phủ của quân đội Pháp.</p></div></article>
+        <article class="figure"><div class="avatar">312</div><div><h3>Đại đoàn 312</h3><p>Một trong các đơn vị chủ lực tham gia nhiều trận đánh then chốt, trong đó có khu vực Him Lam và trung tâm Mường Thanh.</p></div></article>
+        <article class="figure"><div class="avatar">316</div><div><h3>Đại đoàn 316</h3><p>Tham gia tiến công và vây ép ở hướng Đông, trong đó có các cao điểm A1, C1 và khu vực lân cận.</p></div></article>
+      </div>
+    </section>
+
+    <section id="dau-an" class="container">
+      <div class="section-head">
+        <div><span class="eyebrow" style="color:var(--red)">05 · Dấu ấn còn lại</span><h2>Di tích hôm nay kể lại lịch sử</h2></div>
+        <p>Chiến trường Điện Biên Phủ hiện được bảo tồn trong một quần thể di tích, giúp người xem hình dung địa hình và dấu tích của trận đánh.</p>
+      </div>
+      <div class="gallery">
+        <figure>
+          <img src="https://special.nhandan.vn/chienthang_vangvong_tren_thegioi/assets/d7UXgs6HHa/bk.1581_resize-1449x944.jpg" alt="Ảnh tư liệu chiến trường Điện Biên Phủ, 1954" loading="lazy">
+          <figcaption>Ảnh tư liệu về chiến trường Điện Biên Phủ. Nguồn: Báo Nhân Dân — chuyên trang “Chiến thắng vang vọng trên thế giới”.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://nads.1cdn.vn/2024/05/02/W_3.lo-cot-cay-da-cut-u-thang-nguoi-tren-doi-a1-bi-dai-doi-671-tieu-doan-251-trung-doan-174-dai-doan-316-tieu-diet-luc-1-gio-30-phut-ngay-7-5.1954.jpg" alt="Dấu tích giao thông hào trên đồi A1" loading="lazy">
+          <figcaption>Đồi A1 — dấu tích công sự và chiến hào. Nguồn ảnh: Nhiếp ảnh & Đời sống.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://admin.vov.gov.vn/UploadFolder/KhoTin/Images/UploadFolder/VOVVN/Images/sites/default/files/styles/large/public/2024-04/dien_bien_2_0.jpg" alt="Quần thể di tích chiến trường Điện Biên Phủ" loading="lazy">
+          <figcaption>Một góc khu di tích chiến trường Điện Biên Phủ. Nguồn ảnh: VOV.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="container" style="padding-top:18px">
+      <div class="grid-2">
+        <article class="card card-pad">
+          <p class="quote">“Chiến dịch Điện Biên Phủ đã trở thành một dấu mốc quan trọng, tác động mạnh đến cục diện Chiến tranh Đông Dương và tiến trình đàm phán tại Genevo.”<small>— Khái quát theo các tài liệu của Bộ Quốc phòng và Bảo tàng Lịch sử Quân sự Việt Nam.</small></p>
+        </article>
+        <article class="card card-pad">
+          <h3>Kết quả & ý nghĩa lịch sử</h3>
+          <p>Chiều 7/5/1954, tập đoàn cứ điểm Điện Biên Phủ bị đánh bại. Theo tài liệu của Bộ Quốc phòng, chiến thắng đã góp phần buộc Pháp đi đến ký Hiệp định Genevo tháng 7/1954, chấm dứt chiến tranh ở Đông Dương và tạo bước ngoặt cho phong trào giải phóng dân tộc.</p>
+          <p class="mini">Nguồn: Bộ Quốc phòng Việt Nam (mod.gov.vn); Bảo tàng Lịch sử Quân sự Việt Nam (btlsqsvn.mod.gov.vn).</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" style="padding-top:20px">
+      <div class="card card-pad quiz">
+        <div>
+          <span class="eyebrow" style="color:var(--red)">06 · Kiểm tra nhanh</span>
+          <h2 style="font-family:Georgia,serif;margin:10px 0">Bạn nhớ mốc kết thúc chiến dịch?</h2>
+          <p style="color:var(--muted);margin-bottom:0">Chọn một đáp án. Phần trả lời chỉ để ôn tập kiến thức cơ bản.</p>
+        </div>
+        <div>
+          <div class="quiz-options" id="quizOptions">
+            <button class="option" data-answer="wrong">01/05/1954</button>
+            <button class="option" data-answer="wrong">06/05/1954</button>
+            <button class="option" data-answer="correct">07/05/1954</button>
+            <button class="option" data-answer="wrong">21/07/1954</button>
+          </div>
+          <div class="quiz-result" id="quizResult" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="section-head" style="margin-bottom:18px">
+        <div><span class="eyebrow">Nguồn tham khảo</span><h2 style="color:#fff">Tư liệu dùng cho trang</h2></div>
+        <p style="color:rgba(255,255,255,.68)">Trang được thiết kế cho mục đích học tập và giới thiệu lịch sử; hình ảnh/video vẫn thuộc nguồn cung cấp tương ứng.</p>
+      </div>
+      <div class="sources">
+        <div>• Bảo tàng Lịch sử Quân sự Việt Nam: <a href="https://btlsqsvn.mod.gov.vn/tin-tuc/chi-tiet/chien-dich-dien-bien-phu-gianh-thang-loi-80406ebf-52da-4602-8be1-f6cf1c638fa1" target="_blank" rel="noopener">“Chiến dịch Điện Biên Phủ giành thắng lợi”</a></div>
+        <div>• Bộ Quốc phòng: <a href="https://www.mod.gov.vn/vn/chi-tiet/sa-ttsk/sa-tt-qpan/8f83a50f-64e2-47a2-8e1d-be106bb0294e" target="_blank" rel="noopener">“Chiến thắng Điện Biên Phủ 1954 - Sự kiện mang giá trị và tầm vóc thời đại”</a></div>
+        <div>• Bộ Tư lệnh Bảo vệ Lăng Chủ tịch Hồ Chí Minh: <a href="https://btllang.mod.gov.vn/tin-tuc/tin-tong-hop/3569-toan-canh-ve-chien-dich-dien-bien-phu.html" target="_blank" rel="noopener">“Toàn cảnh về Chiến dịch Điện Biên Phủ”</a></div>
+        <div>• Báo Nhân Dân — ảnh tư liệu: <a href="https://special.nhandan.vn/chienthang_vangvong_tren_thegioi/index.html" target="_blank" rel="noopener">“Chiến thắng vang vọng trên thế giới”</a></div>
+        <div>• VOV — ảnh khu di tích: <a href="https://vov.gov.vn/dien-bien-phu-battlefield-relic-site-lures-tourists-dtnew-776836" target="_blank" rel="noopener">“Dien Bien Phu battlefield relic site lures tourists”</a></div>
+      </div>
+      <p class="mini" style="margin-top:20px;color:rgba(255,255,255,.45)">Video MP4: tệp video do người dùng cung cấp và được lưu cùng thư mục website để phát trực tiếp.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Về đầu trang">↑</button>
+
+  <script>
+    const options = document.querySelectorAll('.option');
+    const result = document.getElementById('quizResult');
+    options.forEach(btn => btn.addEventListener('click', () => {
+      options.forEach(o => o.classList.remove('correct','wrong'));
+      if(btn.dataset.answer === 'correct'){
+        btn.classList.add('correct');
+        result.textContent = 'Chính xác! Chiến dịch kết thúc vào ngày 07/05/1954.';
+      } else {
+        btn.classList.add('wrong');
+        result.textContent = 'Chưa đúng. Mốc kết thúc chiến dịch là 07/05/1954.';
+      }
+    }));
+  </script>
+
+<script>
+(function () {
+  const roots = [document.body];
+  const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walk.nextNode()) nodes.push(walk.currentNode);
+
+  // Common words on this page; the script joins only known-word splits.
+  const words = new Set(`
+    chiến chiến dịch điện biên phủ năm 1954
+    ngày đêm chiến đấu các địa danh tiêu biểu ý nghĩa lịch sử
+    chiến thắng bối cảnh mục tiêu khái quát tổng quan
+    chiến lược kháng chiến chống pháp tập đoàn cứ điểm lớn
+    vùng tây bắc việt nam quân đội nhân dân
+    tiến công đợt phá vỡ cửa ngõ phía bắc
+    quân ta him lam độc lập bản kéo sân bay mường thanh
+    trung tâm khép chặt vòng vây tổng công kích kết thúc
+    cuối cùng vị trí then chốt sở chỉ huy bộ tham mưu
+    con người lực lượng những nhân vật đại đoàn tham gia
+    hướng đông cao điểm khu vực lân cận
+    dấu ấn còn lại di tích hôm nay kể lại lịch sử
+    kết quả nhà nước hội nghị genève bước ngoặt
+    kiểm tra nhanh chọn một đáp án nguồn tham khảo tư liệu
+  `.trim().split(/\s+/).filter(Boolean).map(s => s.normalize('NFC')));
+
+  const candidates = [...words].filter(w => /^[\p{L}Đđ]+$/u.test(w) && w.length >= 4);
+
+  for (const node of nodes) {
+    if (!node.nodeValue || !node.nodeValue.trim()) continue;
+    let s = node.nodeValue.normalize('NFC').replace(/[\u00A0\u200B\u200C\u200D\uFEFF]/g, ' ');
+    for (const w of candidates) {
+      for (let k = 1; k <= 2 && k < w.length - 2; k++) {
+        const a = w.slice(0, -k), b = w.slice(-k);
+        const re = new RegExp('(^|[^\p{L}])' + a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\s+' + b.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?=$|[^\p{L}])', 'gu');
+        s = s.replace(re, '$1' + w);
+      }
+    }
+    node.nodeValue = s;
+  }
+})();
+</script>
+
+</body>
+</html>
